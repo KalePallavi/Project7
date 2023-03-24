@@ -1,0 +1,31 @@
+package project;
+import java.util.HashMap;
+import java.util.Map;
+
+public class sum {
+	
+	public static void main(String[] args)
+	{
+		int [] a = {-40,-5,1,3,6,7,8,20};
+		
+		printSumPairs(a,15);
+		}
+	
+	public static void printSumPairs(int [] input,int k) {
+		
+		Map< Integer, Integer > pairs = new HashMap <Integer, Integer>();
+		
+		for(int i=0; i < input.length; i ++) {
+			
+			if(pairs.containsKey(input[i]))
+				
+				System.out.println(input[i]+","+pairs.get (input[i]));
+			
+			else
+				
+				pairs.put(k-input[i],input[i]);
+		}
+	}
+}
+
+
